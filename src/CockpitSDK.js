@@ -149,7 +149,8 @@ class CockpitSDK {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        filter: this.stringifyOptions(filter),
+        // filter: this.stringifyOptions(filter),
+        body: this.stringifyOptions(filter) // fix property name
       },
     );
   }
